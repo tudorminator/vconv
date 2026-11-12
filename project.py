@@ -1,7 +1,7 @@
 #PY  <- Needed to identify #
 #--automatically built--
 
-adm = Avidemux()
+adm = Avidemux() # pyright: ignore[reportUndefinedVariable]
 adm.clearSegments()
 adm.addSegment(0, 114558, 33935442)
 adm.markerA = 0

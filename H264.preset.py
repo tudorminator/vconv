@@ -1,6 +1,6 @@
 #PY  <- Needed to identify #
 #--automatically built--
-adm = Avidemux()
+adm = Avidemux() # pyright: ignore[reportUndefinedVariable]
 if not adm.loadVideo("${INPUT_FILE}"):
     raise("Cannot load video: ${INPUT_FILE}")
 adm.setHDRConfig(1, 1, 1, 1, 0)

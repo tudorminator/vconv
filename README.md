@@ -20,9 +20,9 @@ There is also a simpler (but unfinished) FFmpeg-based helper script, `vconv_ffmp
 
 - `vconv.sh` — main conversion script
 - `vconv_ffmpeg.sh` — FFmpeg-based conversion helper - not finished, not recommended
-- `project.py` — Avidemux Python project, not used by the script, but as template/example for conversion presets
-- `HEVC.preset.py` — HEVC preset
-- `H264.preset.py` — H264 preset
+- `project.py` — Python project as saved by Avidemux; not used directly by the script, but as template/example for conversion presets
+- `HEVC.preset.py` — HEVC preset: 2500 to 3000 kbps variable bitrate, swresize and msharpen filters, Nvidia H264 codec
+- `H264.preset.py` — H264 preset: 2000 kbps variable birtate, swresize and msharpen filters, Nvidia HEVC codec
 
 ## Requirements
 
@@ -75,11 +75,12 @@ Examples in this repository:
 
 These files can be edited to tune quality, scale, bitrate, and filter settings for your workflow.
 
+⚠️ **Note**: Only one audio track is considered, and the included presets flatten the output to monoaural, so you may want to change that.
+
 ## Notes
 
 - Output filenames preserve the source base name with a `.mp4` extension.
 - Output files are not overwritten automatically if they already exist.
-- Only one audio track is considered, haven't tried with more, not really needed for my workflow.
 - The script is oriented around a local Windows workstation workflow and expects Avidemux to be installed in the standard locations often used by the author.
 
 ## Example workflow
